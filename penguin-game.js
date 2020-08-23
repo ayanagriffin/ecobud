@@ -6,7 +6,7 @@
    loadImage createCheckbox createSlider createButton  keyIsPressed */
 
 let time=0,canvas,allcubes=[],redIce,blueIce,x1=75,y1=75,totGone=0,thermometer,frontV,backV,leftV,rightV,gameOver=false, penguin,ocean;
-let beforeGame = true,days=0, highscore=0;
+let beforeGame = true,days=0, highscore=0,rand=0,splash,sad,stopTime=0;
 
 function setup() {
   canvas = createCanvas(500, 500);
@@ -18,6 +18,8 @@ function setup() {
   leftV = loadImage('https://cdn.glitch.com/b7f307dd-f2d7-4ce3-a381-12464d9a0fe9%2Fpenguin%20left.png?v=1598037776508');
   rightV = loadImage('https://cdn.glitch.com/b7f307dd-f2d7-4ce3-a381-12464d9a0fe9%2Fpenguin%20right.png?v=1598037773363');
   ocean = loadImage('https://cdn.glitch.com/b7f307dd-f2d7-4ce3-a381-12464d9a0fe9%2FpBack.png?v=1598078765415');
+  sad = loadImage('https://cdn.glitch.com/b7f307dd-f2d7-4ce3-a381-12464d9a0fe9%2Fsad.png?v=1598180239840');
+  splash = loadImage('https://cdn.glitch.com/b7f307dd-f2d7-4ce3-a381-12464d9a0fe9%2Fwater.png?v=1598180190735');
   penguin = new Penguin();
   gridSetUp();
   noFill();
@@ -29,10 +31,11 @@ function draw() {
   if(beforeGame == true) {
     beforeGameHandler();
   }
-  else if(time>3000 || gameOver==true) {
+  else if(time>3000 || gameOver==true ||totGone>2) {
     gameOverHandler();
   }
   else {
+    totGone=0;
     image(ocean,0,0,width,height);
     noStroke();
     gridDisplay();
@@ -47,10 +50,13 @@ function draw() {
     text(`Longest Time: ${highscore}`,50,60);
     noFill();
     penguin.move();
+    rand = floor(random(16));
     image(penguin.image,penguin.x,penguin.y,75,75);
-    gridHandling(allcubes[round(random(16))]);
+    checkBorders();
+    gridHandling(allcubes[rand]);
     time++
   }
+  stopTime++;
 }
 
 function beforeGameHandler() {
@@ -79,7 +85,13 @@ function beforeGameHandler() {
 }
 
 function gameOverHandler() {
- gameOver = true;
+  if(stopTime<time+150 &&time<3049) {
+    gameOver = true;
+    penguin.image = sad;
+    image(splash, penguin.x+75/4,penguin.y+50,50,50);
+  }
+  else {
+    gameOver = true;
   image(ocean,0,0,width,height);
     fill('#ff85b9');
     rect(130,105,250,300,20);
@@ -111,8 +123,10 @@ function gameOverHandler() {
       totGone=0;
       allcubes = [];
       gridSetUp();
+      stopTime=0;
     }
     noFill();
+  }
 }
 
 // for state: 0 is active, 1 is sinking, 2 is gone
@@ -168,22 +182,29 @@ function gridDisplay() {
           allcubes[i].state = 2;
         }
       }
-      
       image(allcubes[i].image,allcubes[i].xPos,allcubes[i].yPos,.2*width,.2*height);
     }
     else if(allcubes[i].state==2) {
-      // if(penguin.x+(.05*width)<(allcubes[i].xPos+(.2*width))
-      //    &&penguin.y+(.05*width)<(allcubes[i].yPos+(.2*height))
-      //    &&penguin.x+(.05*width)>allcubes[i].xPos
-      //    &&penguin.y+(.05*width)<allcubes[i].yPos) {
-      //   gameOverHandler();
-      // }
+      totGone++;
+      if(collideRectRect(allcubes[i].xPos+20,allcubes[i].yPos+20,.2*width-40,.2*height-40, penguin.x+75/3,penguin.y+4*(75/5),25,10)) {
+        gameOverHandler();
+      }
     }
+  }
+}
+
+function checkBorders() {
+  if(collideRectRect(penguin.x+75/3,penguin.y+4*(75/5),25,10, 0,0,60,500) || collideRectRect(penguin.x+75/3,penguin.y+4*(75/5),25,10, 0,0,500,60) || collideRectRect(penguin.x+75/3,penguin.y+4*(75/5),25,10, 0,480,500,20) || collideRectRect(penguin.x+75/3,penguin.y+4*(75/5),25,10, 480,0,20,500)) {
+    gameOverHandler();
   }
 }
 
 function gridHandling(cube) {
   if(time%175==0) {
+    while(allcubes[rand].state==2) {
+      rand=floor(random(16))
+    }
+    cube = allcubes[rand];
     cube.state = 1;
   }
 }
