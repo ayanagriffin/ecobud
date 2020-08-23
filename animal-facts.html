@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>animal facts</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+
+  </head>
+  <body onload = "getFacts()">
+  <div class = "menu">
+    <div id="name" class="menu-button" onclick="window.location.href='/home.html';">
+        home
+      </div>
+    <div id="game" class="menu-button" onclick="window.location.href='/game.html';">
+        game
+      </div>
+    <div id="quiz" class="menu-button" onclick="window.location.href='/questionnaire.html';">
+        quiz
+      </div>
+    <div id="switch" class="menu-button" onclick="window.location.href='/index.html';">
+        switch buddies
+      </div>
+    </div>
+    <h2 class="top-title" id="animal-name">
+      animal name
+    </h2>
+    <div class="pic-facts">
+      <img
+      src="https://cdn.glitch.com/b7f307dd-f2d7-4ce3-a381-12464d9a0fe9%2Fpenguin%20neutral.png?v=1598037769692"
+      alt="animal showing emotion based on your score"
+      id="home-animal"
+    />
+      <div class="fact-box">
+         <h3 id="facts">
+          <ul>
+            <li id="f1"> </li>
+             <li id="f2"> </li>
+             <li id="f3"> </li>
+            
+          </ul>
+           <p id = "source-text">
+             <a href="https://www.softschools.com/facts/animals/galapagos_penguin_facts/2447/">source</a>
+           </p>
+        </h3>
+      </div>
+      
+    </div>
+    
+   
+  
+  
+    
+  </body>
+  
+</html>

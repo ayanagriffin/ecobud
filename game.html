@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>game</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <div class = "menu">
+      <div id="name" class="menu-button" onclick="window.location.href='/home.html';">
+        home
+      </div>
+    <div id="quiz" class="menu-button" onclick="window.location.href='/questionnaire.html';">
+        quiz
+      </div>
+    <div id="switch" class="menu-button" onclick="window.location.href='/index.html';">
+        switch buddies
+      </div>
+    </div>
+    <style>
+      .embed-container {
+        position: relative;
+        padding-bottom: 80%;
+        height: 0;
+        max-width: 100%;
+      }
+      .embed-container iframe,
+      .embed-container object,
+      .embed-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      small {
+        position: absolute;
+        z-index: 40;
+        bottom: 0;
+        margin-bottom: -15px;
+      }
+    </style>
+    <div class="embed-container">
+      <iframe
+        width="500"
+        height="400"
+        frameborder="0"
+        scrolling="no"
+        marginheight="0"
+        marginwidth="0"
+        title="HFTP"
+        ></iframe>
+    </div>
+  </body>
+</html>
+
+<!-- data visualization html thing -->
+<!-- <style>.embed-container {position: relative; padding-bottom: 80%; height: 0; max-width: 100%;} .embed-container iframe, .embed-container object, .embed-container iframe{position: absolute; top: 0; left: 0; width: 100%; height: 55%;} small{position: absolute; z-index: 40; bottom: 0; margin-bottom: -15px;}</style><div class="embed-container"><iframe width="500" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="HFTP" src="//learngis2.maps.arcgis.com/apps/Embed/index.html?webmap=c32c1a0fc32b4756874f4474fa433971&zoom=true&previewImage=false&scale=true&legend=true&disable_scroll=false&theme=light"></iframe></div> -->

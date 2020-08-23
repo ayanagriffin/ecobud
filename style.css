@@ -1,0 +1,193 @@
+/* CSS files add styling rules to your content */
+
+body {
+  background: #d2f7f6;
+  text-align: center;
+  font-family: "Noto Sans JP";
+  position: relative;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 12vh;
+  font-weight: 900;
+  padding-bottom:3vh;
+  
+}
+
+#welcome{
+  font-size: 15vh;
+  margin-top: 10vh;
+  margin-bottom: 3vh;
+}
+.top-title {
+  margin: 0;
+}
+h2 {
+  font-weight: 700;
+  font-size: 5vh;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 3.5vh;
+  padding-left: 1%;
+  padding-top:.1%;
+  color: #ffffff;
+  text-align: left;
+}
+p {
+  font-size: 3vh;
+  font-weight: 400;
+  
+}
+
+.selectionButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.solo-button{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  line-height: 8vh;
+  
+}
+li{
+  margin:5vh;
+}
+.button {
+  cursor: pointer;
+  border-radius: 5px;
+  width: 20vh;
+  height: 8vh;
+  padding: 4px;
+  margin-right: 20px;
+  background: #ffabcf;
+  box-shadow: 0px 7px #ff85b9;
+  font-size: 2.5vh;
+}
+
+#tree-landscape {
+  position: absolute;
+  width: 40%;
+  left: 0;
+  top: 25%;
+  z-index: -1;
+}
+
+#ocean {
+  position: absolute;
+  width: 40%;
+  right:0;
+  top: 25%;
+  z-index: -1;
+}
+
+.score-container {
+  border-radius: 5vh;
+  width: 50vw;
+  height: 70vh;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #2f4b7a;
+  box-shadow: 1vw 2vh #4268a6;
+  position: relative;
+  
+  
+}
+
+.duo-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  line-height: 8vh;
+  position:absolute;
+  top:80%;
+  right:25%;
+}
+
+#neutral-animal {
+  width: 20%;
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+
+#score-animal{
+  width: 40%;
+  position: absolute;
+  top: 17%;
+  left: 28%;
+    
+}
+
+#your-score{
+  margin: 0;
+  font-size: 7vh;
+}
+
+.pic-facts {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.fact-box{
+  border-radius: 5vh;
+  width: 50vw;
+  height: 70vh;
+  margin-left: 43%;
+  margin-right: 5%;
+  margin-top: 1%;
+  
+  background: #ffabcf;
+  box-shadow: 1vh 2vh #ff85b9;
+  position: relative;
+}
+#home-animal {
+  position: absolute;
+  width: 40%;
+  left: 0;
+  top:-6%;
+}
+
+.menu {
+  height: 10vh;
+  background-color: #2f4b7a;
+  border-radius: 2vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.menu-button{
+  cursor: pointer;
+  color: #ffffff;
+  margin: 0;
+  padding: 2vw;
+  font-size: 5vh;
+  font-weight: 700;
+}
+
+#name {
+  margin-right: auto;
+
+}
+
+.animate__animated.animate__backInDown {
+  --animate-duration: 2s;
+}
+
+#animal-name{
+  margin-top: 2vh;
+  margin-left: 35vw;
+}
+
+#source-text {
+  position: absolute;
+  right:5%;
+  bottom:0;
+}

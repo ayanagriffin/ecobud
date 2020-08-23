@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>home</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+
+  </head>
+  <body onload = "getHomeAnimal();getTips()">
+  <div class = "menu">
+    <div id="name" class="menu-button" onclick="window.location.href='/animal-facts.html';">
+        
+      </div>
+    <div id="game" class="menu-button" onclick="window.location.href='/game.html';">
+        game
+      </div>
+    <div id="quiz" class="menu-button" onclick="window.location.href='/questionnaire.html';">
+        quiz
+      </div>
+    <div id="switch" class="menu-button" onclick="window.location.href='/index.html';">
+        switch buddies
+      </div>
+    </div>
+    <h2 class="top-title" id="animal-name">
+      tips and fun facts to keep your animal happy
+    </h2>
+    <div class="pic-facts">
+      <img
+      src="https://cdn.glitch.com/b7f307dd-f2d7-4ce3-a381-12464d9a0fe9%2Fpenguin%20neutral.png?v=1598037769692"
+      alt="animal showing emotion based on your score"
+      id="home-animal"
+      style="cursor:pointer;"
+    />
+      <div class="fact-box">
+        <h3 id="tips">
+          <ul>
+            <li id="tip1"> 
+             political leader have a huge impact on environmental policies. <a href="https://www.factcheck.org/">FactCheck</a> is a great resource to check politician's statements and promises regarding climate change
+             </li>
+            <li id="tip2"> 
+            every year, more than $13 billion worth of energy leaks from houses through small holes and cracks
+              </li>
+             <li id="tip3"> a hot water faucet that leaks one drop per second can add up to 165 gallons a month</li>
+
+          </ul>
+          <p id = "source-text">
+             <a href="https://www.pointpark.edu/About/Sustainability/FunFacts">source and more facts</a>
+           </p>
+        </h3>
+      </div>
+      
+    </div>
+  
+  
+    
+  </body>
+  
+</html>

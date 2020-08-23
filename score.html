@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>questionnaire</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+
+  </head>
+  <body onload = "getScore()">
+  <h1 class = "top-title">
+    daily questionnaire
+    </h1>
+  <div class = "score-container">
+    <h1 id = "your-score">
+      your score:
+    </h1>
+    <img
+      src="https://cdn.glitch.com/b7f307dd-f2d7-4ce3-a381-12464d9a0fe9%2Fpenguin%20neutral.png?v=1598037769692"
+      alt="animal showing emotion based on your score"
+      id="score-animal"
+    />
+ <div class = "duo-buttons">
+      <div id="ok" class="button" onclick="window.location.href='/home.html'">
+          done
+      </div>
+   <div id="recents" class="button" onclick="window.location.href='/past-scores.html'">
+          see recent scores
+      </div>
+    </div>
+    </div>  
+  
+  
+    
+  </body>
+  
+</html>
