@@ -14,16 +14,24 @@
 
     <!-- import the webpage's javascript file -->
     <script src="/script.js" defer></script>
+    
+    <script>
+    function dispScore(){
+      getScore();
+      let hapScore = sessionStorage.getItem("score");
+      document.getElementById("your-score").innerHTML =
+      "<h2>your score:</h2><br> <div id='score'>" + hapScore + "</div>";
+    }
+    </script>
 
   </head>
-  <body onload = "getScore()">
+  <body onload = "dispScore()">
   <h1 class = "top-title">
     daily questionnaire
     </h1>
   <div class = "score-container">
-    <h1 id = "your-score">
-      your score:
-    </h1>
+    <div id = "your-score">
+    </div>
     <img
       src="https://cdn.glitch.com/b7f307dd-f2d7-4ce3-a381-12464d9a0fe9%2Fpenguin%20neutral.png?v=1598037769692"
       alt="animal showing emotion based on your score"

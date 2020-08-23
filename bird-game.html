@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>data visualization</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+     <script src="/script.js" defer></script>
+      <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    
+    <!-- import the webpage's javascript file -->
+   
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.sound.min.js"></script>
+    <!-- import the p5 collision library -->
+    <script src="https://cdn.jsdelivr.net/gh/bmoren/p5.collide2D@0.6/p5.collide2d.min.js"></script>
+    
+    <!-- link p5.play.js -->
+     <script src="lib/p5.play.js" type="text/javascript"></script>  
+  </head>  
+  <body>
+    <div class = "menu">
+    
+    <div id="name" class="menu-button" onclick="window.location.href='/animal-facts.html';">
+        home
+      </div>
+    
+    <div id="quiz" class="menu-button" onclick="window.location.href='/questionnaire.html';">
+        quiz
+      </div>
+    <div id="switch" class="menu-button" onclick="window.location.href='/index.html';">
+        switch buddies
+      </div>
+    </div>
+    <div class = "birdtext">
+      <p>
+        Forests are a home for an immense amount of living things and are important for resources that are vital to life, such as water, food, medicine, and fuel. Deforestation not only limits these resources and de-homes many species; it also accelerates climate change. Simple ways to help stop deforestation include buying recycled products and going paperless if possible.
+        <br>
+        Explore the map to learn about deforestation and climate change around the world. The pink areas represent of deforestation from 2001 to 2019; the darker the pink, the greater the loss. The red dots indicate the effect of climate change; the greater the circle, the greater the effect. Click anywhere on the map to view climate change statistics such as climate change re
+      </p>
+
+    </div>
+    <style>.embed-container {position: relative; padding-bottom: 80%; margin-left: 5%; height: 0; max-width: 100%;} .embed-container iframe, .embed-container object, .embed-container iframe{position: absolute; top: 0; left: 0; width: 95%; height: 50%;} small{position: absolute; z-index: 40; bottom: 0; margin-bottom: -15px;}</style><div class="embed-container"><iframe width="500" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="HFTP" src="//learngis2.maps.arcgis.com/apps/Embed/index.html?webmap=c32c1a0fc32b4756874f4474fa433971&zoom=true&previewImage=false&scale=true&search=true&searchextent=true&legend=true&disable_scroll=false&theme=light"></iframe></div>
+
+    <p id = "citation">
+      Deforestation Map source: Hansen/UMD/Google/USGS/NASA, accessed through Global Forest Watch
+      <br>
+      Climate change map source: Notre Dame Global Adaptation Initiative (ND-GAIN) Country Index <a href="http://gain.nd.edu/our-work/country-index/">link</a>
+      <br>
+       Informational prompt source: <a href="https://www.softschools.com/facts/animals/galapagos_penguin_facts/2447/">link</a>
+    </p>
+  </body>
+</html>
