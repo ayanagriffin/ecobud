@@ -91,8 +91,10 @@ function getHomeAnimal() {
       document.getElementById("home-animal").src = neutralPenguin;
     }
   } else if (animal === "bird") {
+    document.getElementById("game").innerHTML = "data";
     document.getElementById("game").setAttribute("onclick", "window.location.href='/bird-game.html';");
     document.getElementById("name").innerHTML = "great curassow bird";
+    
     if (mood === "sad") {
       document.getElementById("home-animal").src = sadBird;
     } else if (mood === "happy") {
@@ -194,6 +196,7 @@ function getFacts() {
     document.getElementById("f3").innerHTML =
       "they become ready for independent life at only 3-6 months old";
   } else if (animal === "bird") {
+    document.getElementById("game").innerHTML = "data";
     document.getElementById("game").setAttribute("onclick", "window.location.href='/bird-game.html';");
      if(mood === "sad"){
       document.getElementById("home-animal").src = sadBird;

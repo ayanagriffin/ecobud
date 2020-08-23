@@ -242,11 +242,13 @@ li{
 .birdtext {
   border-radius: 5vh;
   width: 90%;
-  height: 20vh;
+  height: 33vh;
   margin-left: 5%;
   margin-right: 5%;
   margin-top: 1%;
   margin-bottom: 2%;
+  padding:1%;
+  padding-bottom:2%;
   
   background: #ffabcf;
   box-shadow: 1vh 2vh #ff85b9;
