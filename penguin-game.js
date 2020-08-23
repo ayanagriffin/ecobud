@@ -31,7 +31,7 @@ function draw() {
   if(beforeGame == true) {
     beforeGameHandler();
   }
-  else if(time>3000 || gameOver==true ||totGone>2) {
+  else if(time>3000 || gameOver==true ||totGone>15) {
     gameOverHandler();
   }
   else {
