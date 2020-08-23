@@ -1,3 +1,4 @@
+
 /* CSS files add styling rules to your content */
 
 body {
@@ -26,6 +27,7 @@ h1 {
 h2 {
   font-weight: 700;
   font-size: 5vh;
+  position: relative;
 }
 
 h3 {
@@ -85,18 +87,7 @@ li{
   z-index: -1;
 }
 
-.score-container {
-  border-radius: 5vh;
-  width: 50vw;
-  height: 70vh;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #2f4b7a;
-  box-shadow: 1vw 2vh #4268a6;
-  position: relative;
-  
-  
-}
+
 
 .duo-buttons {
   display: flex;
@@ -116,16 +107,42 @@ li{
 }
 
 #score-animal{
-  width: 40%;
+  width: 35%;
   position: absolute;
   top: 17%;
-  left: 28%;
+  left: 31%;
     
 }
 
+.score-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5vh;
+  width: 50vw;
+  height: 70vh;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #2f4b7a;
+  box-shadow: 1vw 2vh #4268a6;
+  position: relative;
+  
+  
+}
+
 #your-score{
-  margin: 0;
-  font-size: 7vh;
+  
+  color: #ffffff;
+}
+
+#score{
+  
+  color: #ffffff;
+  font-size: 8vh;
+  font-weight: 900;
+  margin-top: 88%;
+  margin-left:-13%;
+
 }
 
 .pic-facts {
@@ -190,4 +207,54 @@ li{
   position: absolute;
   right:5%;
   bottom:0;
+}
+
+.questionnaire-q {
+  font-weight: 500;
+}
+
+.q-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5vh;
+  width: 50vw;
+  height: 70vh;
+  margin-left: auto;
+  margin-right: auto;
+  background: #ffabcf;
+  box-shadow: 1vh 2vh #ff85b9;
+  position: relative;
+  
+}
+
+#date{
+  margin-bottom:5vh;
+  
+}
+
+.game {
+  margin: 2em;
+  background-color: #2f4b7a;
+}
+
+.birdtext {
+  border-radius: 5vh;
+  width: 90%;
+  height: 20vh;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 1%;
+  margin-bottom: 2%;
+  
+  background: #ffabcf;
+  box-shadow: 1vh 2vh #ff85b9;
+  position: relative;
+}
+
+#citation {
+  position: absolute;
+  bottom:-10%;
+  right:0;
 }

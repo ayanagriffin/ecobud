@@ -6,34 +6,114 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
     <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="/style.css" />
-
     <!-- import the webpage's javascript file -->
     <script src="/script.js" defer></script>
-
+    
+    <script>
+      var score = 0;
+      function showElements(check, id1, id2, id3, id4){
+        //generalize with a list
+        var checkBox = document.getElementById(check);
+        var answer1 = document.getElementById(id1);
+        var answer1Label = document.getElementById(id2);
+        var answer2 = document.getElementById(id3);
+        var answer2Label = document.getElementById(id4);
+        
+        if (checkBox.checked == true){
+          answer1.style.display = "inline";
+          answer1Label.style.display = "inline";
+          answer2Label.style.display = "inline";
+          answer2.style.display = "inline";
+         
+        } else {
+          answer1.style.display = "none";
+          answer1Label.style.display = "none";
+          answer2Label.style.display = "none";
+          answer2.style.display = "none";
+         
+        }
+        //document.getElementById("1a").style.visibility="visible";
+      }
+      function calculateScores(){
+        var shower = document.getElementById("1");
+        if(shower.checked == true){
+          var hot = document.getElementById("1a");
+          if(hot.checked == true){
+            score--;
+          }
+          else{
+            var cold = document.getElementById("1b");
+            if(cold.checked == true){
+              score++;
+            }
+          }
+        }
+        
+        var power = document.getElementById("2");
+        if(power.checked == true){
+          score++;
+        }
+        
+        var outing = document.getElementById("3");
+        if(outing.checked == true){
+          var car = document.getElementById("3a");
+          var bus = document.getElementById("3b");
+         
+          if(car.checked == true){
+            score -= 2;
+          }
+          else if (bus.checked == true){
+            
+            
+              score += 2;
+            
+          }
+        }
+        setScore(score+3);
+      }
+    </script>
   </head>
-  <body onload = "getAnimal()">
+  <body>
   <h1 class = "top-title">
     daily questionnaire
     </h1>
-    
-    <h1>
-      questionnaire 
-    </h1>
-    <div class = "solo-button">
-      <div id="done" class="button" onclick="window.location.href='/score.html';setScore(29)">
-          done
+    <div class="q-container">
+    <form action="/score.html">
+      <input type="text" id="date" name="date" value="Date" readonly><br>
+      
+      <input type="checkbox" id="1" onclick="showElements('1', '1a', '1aL', '1b', '1bL')" value="shower">
+      <label for="shower" class = "questionnaire-q"> took a shower today </label><br>
+      <blockquote>
+        <input type="radio" id="1a" name="temperature" value="temperatureA" style="display:none">
+        <label for="temperatureA" class = "questionnaire-q" id="1aL" style="display:none"> hot </label><br>
+        <input type="radio" id="1b" name="temperature" value="temperatureB" style="display:none">
+        <label for="temperatureB" class = "questionnaire-q" id="1bL" style="display:none"> cold </label><br>
+      </blockquote>
+      
+      <input type="checkbox" id="2" value="powerStrip">
+      <label for="powerStrip" class = "questionnaire-q" >  made sure electronics are plugged into a power strips instead of the outlet </label><br>
+      
+      <input type="checkbox" id="3" onclick="showElements('3', '3a', '3aL', '3b', '3bL')" value="goingOut">
+      <label for="goingOut" id = "go-out" class = "questionnaire-q"> went out today </label><br>
+      <blockquote>
+        <input type="radio" id="3a" name="vehicle" value="vehicleA" style="display:none">
+        <label for="vehicleA" class = "questionnaire-q" id="3aL" style="display:none"> car </label><br>
+        <input type="radio"  id="3b" name="vehicle" value="vehicleB" style="display:none">
+        <label for="vehicleB" class = "questionnaire-q" id="3bL" style="display:none"> bus </label><br>
+       
+      </blockquote>
+      
+      <br>
+      <div class = "solo-button">
+        <input type="submit" value="done" onclick="calculateScores()">
       </div>
+    </form>
     </div>
-    <img
-      src="https://cdn.glitch.com/b7f307dd-f2d7-4ce3-a381-12464d9a0fe9%2Fpenguin%20neutral.png?v=1598037769692"
-      alt="neutral animal"
-      id="neutral-animal"
-    />
   </body>
   
 </html>

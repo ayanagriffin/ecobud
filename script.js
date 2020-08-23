@@ -1,3 +1,11 @@
+/* global createCanvas background colorMode noStroke HSB color fill ellipse text ENTER
+   stroke line mouseY mouseX strokeWeight rect mouseIsPressed random width height collideCircleCircle 
+   keyCode UP_ARROW DOWN_ARROW LEFT_ARROW RIGHT_ARROW textSize collideRectCircle keyIsDown 
+   windowHeight windowWidth HSL sqrt round frameRate noFill collideRectRect key rotate angleMode
+   DEGREES rectMode CENTER push pop p5 _collideDebug translate cos sin CORNER textAlign textFont ellipseMode abs image floor
+   loadImage createCheckbox createSlider createButton  keyIsPressed loadFont*/
+
+
 let happyTurtle =
     "https://cdn.glitch.com/acf75fd6-559f-44e0-8b37-99503c901125%2Fhappyturtle.png?v=1598116315295",
   sadTurtle =
@@ -18,9 +26,8 @@ let happyTurtle =
     "https://cdn.glitch.com/acf75fd6-559f-44e0-8b37-99503c901125%2Fneutralbird.png?v=1598138830600";
 
 //can change these based on our scoring system
-const CAP1 = 10,
-  CAP2 = 20,
-  CAP3 = 30;
+const CAP1 = 3,
+  CAP2 = 5;
 
 function setAnimal(animalString) {
   sessionStorage.setItem("animal", animalString);
@@ -36,10 +43,35 @@ function getAnimal() {
   }
 }
 
+function getPastScoresAnimal(){
+  let animal = sessionStorage.getItem("animal");
+  if(animal === "penguin"){
+    document.getElementById("game").setAttribute("onclick", "window.location.href='/penguin-game.html';");
+  }else if(animal === "bird"){
+    document.getElementById("game").setAttribute("onclick", "window.location.href='/bird-game.html';");
+  }
+}
+
+function getGameAnimal(){
+  let animal = sessionStorage.getItem("animal");
+  
+  if(animal === "turtle"){
+    
+    //leave src as is
+  }else if(animal === "penguin"){
+    
+    //change src to penguin game 
+    
+  }else if(animal === "bird"){
+    
+  }
+}
+
 function getHomeAnimal() {
   let mood = sessionStorage.getItem("mood");
   let animal = sessionStorage.getItem("animal");
   if (animal === "turtle") {
+    
     document.getElementById("name").innerHTML = "hawksbill sea turtle";
     if (mood === "sad") {
       document.getElementById("home-animal").src = sadTurtle;
@@ -49,6 +81,7 @@ function getHomeAnimal() {
       document.getElementById("home-animal").src = neutralTurtle;
     }
   } else if (animal === "penguin") {
+    document.getElementById("game").setAttribute("onclick", "window.location.href='/penguin-game.html';");
     document.getElementById("name").innerHTML = "galapagos penguin";
     if (mood === "sad") {
       document.getElementById("home-animal").src = sadPenguin;
@@ -58,6 +91,7 @@ function getHomeAnimal() {
       document.getElementById("home-animal").src = neutralPenguin;
     }
   } else if (animal === "bird") {
+    document.getElementById("game").setAttribute("onclick", "window.location.href='/bird-game.html';");
     document.getElementById("name").innerHTML = "great curassow bird";
     if (mood === "sad") {
       document.getElementById("home-animal").src = sadBird;
@@ -122,17 +156,18 @@ function getScore() {
 
 function getFacts() {
   let animal = sessionStorage.getItem("animal");
+  let mood = sessionStorage.getItem("mood");
   if (animal === "turtle") {
     
-    //does not change source link
-    document
-      .getElementById("source-text")
-      .setAttribute(
-        "href",
-        "https://www.nationalgeographic.com/animals/reptiles/h/hawksbill-sea-turtle/"
-      );
-
-    document.getElementById("home-animal").src = neutralTurtle;
+    if(mood === "sad"){
+      document.getElementById("home-animal").src = sadTurtle;
+    }else if(mood === "happy"){
+      document.getElementById("home-animal").src = happyTurtle;
+    }else{
+      document.getElementById("home-animal").src = neutralTurtle;
+    }
+   
+    
     document.getElementById("animal-name").innerHTML =
       "hawksbill sea turtle fun facts";
     document.getElementById("f1").innerHTML =
@@ -142,7 +177,14 @@ function getFacts() {
     document.getElementById("f3").innerHTML =
       "every few years, females return to the beaches where they were born to nest";
   } else if (animal === "penguin") {
-    document.getElementById("home-animal").src = neutralPenguin;
+    document.getElementById("game").setAttribute("onclick", "window.location.href='/penguin-game.html';");
+     if(mood === "sad"){
+      document.getElementById("home-animal").src = sadPenguin;
+    }else if(mood === "happy"){
+      document.getElementById("home-animal").src = happyPenguin;
+    }else{
+      document.getElementById("home-animal").src = neutralPenguin;
+    }
     document.getElementById("animal-name").innerHTML =
       "galapagos penguin fun facts";
     document.getElementById("f1").innerHTML =
@@ -152,7 +194,14 @@ function getFacts() {
     document.getElementById("f3").innerHTML =
       "they become ready for independent life at only 3-6 months old";
   } else if (animal === "bird") {
-    document.getElementById("home-animal").src = neutralBird;
+    document.getElementById("game").setAttribute("onclick", "window.location.href='/bird-game.html';");
+     if(mood === "sad"){
+      document.getElementById("home-animal").src = sadBird;
+    }else if(mood === "happy"){
+      document.getElementById("home-animal").src = happyBird;
+    }else{
+      document.getElementById("home-animal").src = neutralBird;
+    }
     document.getElementById("animal-name").innerHTML =
       "great curassow bird fun facts";
     document.getElementById("f1").innerHTML = "great curassows can be up to 2 meters tall";
