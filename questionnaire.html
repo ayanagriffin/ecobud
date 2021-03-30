@@ -80,14 +80,14 @@
   </head>
   <body>
   <h1 class = "top-title">
-    daily questionnaire
+    Daily Questionnaire
     </h1>
     <div class="q-container">
     <form action="./score.html">
       <input type="text" id="date" name="date" value="Date" readonly><br>
       
       <input type="checkbox" id="1" onclick="showElements('1', '1a', '1aL', '1b', '1bL')" value="shower">
-      <label for="shower" class = "questionnaire-q"> took a shower today </label><br>
+      <label for="shower" class = "questionnaire-q"> Took a shower today </label><br>
       <blockquote>
         <input type="radio" id="1a" name="temperature" value="temperatureA" style="display:none">
         <label for="temperatureA" class = "questionnaire-q" id="1aL" style="display:none"> hot </label><br>
@@ -96,10 +96,10 @@
       </blockquote>
       
       <input type="checkbox" id="2" value="powerStrip">
-      <label for="powerStrip" class = "questionnaire-q" >  made sure electronics are plugged into a power strips instead of the outlet </label><br>
+      <label for="powerStrip" class = "questionnaire-q" >  Made sure electronics are plugged into a power strips instead of the outlet </label><br>
       
       <input type="checkbox" id="3" onclick="showElements('3', '3a', '3aL', '3b', '3bL')" value="goingOut">
-      <label for="goingOut" id = "go-out" class = "questionnaire-q"> went out today </label><br>
+      <label for="goingOut" id = "go-out" class = "questionnaire-q"> Went out today </label><br>
       <blockquote>
         <input type="radio" id="3a" name="vehicle" value="vehicleA" style="display:none">
         <label for="vehicleA" class = "questionnaire-q" id="3aL" style="display:none"> car </label><br>
@@ -110,7 +110,7 @@
       
       <br>
       <div class = "solo-button">
-        <input type="submit" value="done" onclick="calculateScores()">
+        <input class = "button" style="background-color: #2f4b7a; color: #fff"type="submit" value="Done" onclick="calculateScores()">
       </div>
     </form>
     </div>
