@@ -17,7 +17,7 @@ In addition to realizing your habits and tracking your progress, you can play mi
 
 ## How I built it
 
-EcoBud's basic framework was built using [Glitch] (https://glitch.com/), which utilizes p5.js, HTML, CSS, and JavaScript. The data visualization was made using [ArcGIS](https://www.arcgis.com/). In addition, all graphics and designs used in EcoBud are **original designs** made with [Vectornator](https://www.vectornator.io). 
+EcoBud's basic framework was built using [Glitch](https://glitch.com/), which utilizes p5.js, HTML, CSS, and JavaScript. The data visualization was made using [ArcGIS](https://www.arcgis.com/). In addition, all graphics and designs used in EcoBud are **original designs** made with [Vectornator](https://www.vectornator.io). 
  
 ## Challenges I ran into
 
