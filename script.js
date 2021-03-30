@@ -173,11 +173,11 @@ function getFacts() {
     document.getElementById("animal-name").innerHTML =
       "hawksbill sea turtle fun facts";
     document.getElementById("f1").innerHTML =
-      "full-grown hawksbill sea turtles weight 100-150 pounds";
+      "Full-grown hawksbill sea turtles weight 100-150 pounds";
     document.getElementById("f2").innerHTML =
-      "the shell of young hawksbill sea turtles are heart-shaped";
+      "The shell of young hawksbill sea turtles are heart-shaped";
     document.getElementById("f3").innerHTML =
-      "every few years, females return to the beaches where they were born to nest";
+      "Every few years, females return to the beaches where they were born to nest";
   } else if (animal === "penguin") {
     document.getElementById("game").setAttribute("onclick", "window.location.href='./penguin-game.html';");
      if(mood === "sad"){
@@ -188,13 +188,13 @@ function getFacts() {
       document.getElementById("home-animal").src = neutralPenguin;
     }
     document.getElementById("animal-name").innerHTML =
-      "galapagos penguin fun facts";
+      "Galapagos penguin fun facts";
     document.getElementById("f1").innerHTML =
-      "galapagos penguins stay with one partner for their entire lives";
+      "Galapagos penguins stay with one partner for their entire lives";
     document.getElementById("f2").innerHTML =
-      "galapagos penguins are the third smallest penguins in the world, weighing only about 5.5 pounds";
+      "Galapagos penguins are the third smallest penguins in the world, weighing only about 5.5 pounds";
     document.getElementById("f3").innerHTML =
-      "they become ready for independent life at only 3-6 months old";
+      "They become ready for independent life at only 3-6 months old";
   } else if (animal === "bird") {
     document.getElementById("game").innerHTML = "data";
     document.getElementById("game").setAttribute("onclick", "window.location.href='./bird-game.html';");
@@ -207,9 +207,9 @@ function getFacts() {
     }
     document.getElementById("animal-name").innerHTML =
       "great curassow bird fun facts";
-    document.getElementById("f1").innerHTML = "great curassows can be up to 2 meters tall";
-    document.getElementById("f2").innerHTML = "they mainly eat fruits and figs";
-    document.getElementById("f3").innerHTML = "when they feel threatened, they are more likely to run away than fly away";
+    document.getElementById("f1").innerHTML = "Great curassows can be up to 2 meters tall";
+    document.getElementById("f2").innerHTML = "They mainly eat fruits and figs";
+    document.getElementById("f3").innerHTML = "When they feel threatened, they are more likely to run away than fly away";
   }
 
 }
