@@ -1,3 +1,7 @@
+# Ecobud!
+
+Ecobud is a gamified web app to encourage and empower people to be more environmentally conscious. It makes living sustainably and fighting environmental issues enjoyable with an adorable companion that is counting on YOU to take action and make a long-term difference. This project was made for [Hack for the People](https://hackforthepeople.com/), where it won __Best Environmental Hack__ and the __Pale Blue Dot Award__! Check out our project submission video on [Devpost](https://devpost.com/software/ecobud-984phm)
+
 ## Inspiration
 
 Globally, up to __one million__ species are at risk of extinction because of human activities, as reported by the UN. Climate change is one of the most pressing issues that faces society today, and it doesn’t only affect our society. Damage to the Earth hurts  __all__ organisms. The plants and animals around us are also facing the consequences of environmental degradation and __we__ have the power to curb this. Yet, many people do not take action, do not know the immense impact of their actions, or simply do not know where to start or what they can do. This app aims to demonstrate that anyone can contribute to the effort with varying tips for becoming more sustainable. Helping the planet can take many forms of various efforts and resources, from being careful about electricity and water usage by creating small goals to growing your own garden and using only renewable energy. **Our goal is to empower people through a fun and enjoyable, yet impactful and effective, online resource. We hope to enable others around the world to be conscious of their actions and to do their part in protecting the planet through encouraging political action and the use of sustainable habits.**
@@ -13,7 +17,7 @@ In addition to realizing your habits and tracking your progress, you can play mi
 
 ## How I built it
 
-EcoBud's basic framework was built using [Glitch] (https://glitch.com/), which utilizes p5.js, HTML, CSS, and JavaScript. The data visualization was made using [ArcGIS] (https://www.arcgis.com/). In addition, all graphics and designs used in EcoBud are **original designs** made with [Vectornator] (https://www.vectornator.io). 
+EcoBud's basic framework was built using [Glitch] (https://glitch.com/), which utilizes p5.js, HTML, CSS, and JavaScript. The data visualization was made using [ArcGIS](https://www.arcgis.com/). In addition, all graphics and designs used in EcoBud are **original designs** made with [Vectornator](https://www.vectornator.io). 
  
 ## Challenges I ran into
 
