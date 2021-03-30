@@ -10,7 +10,7 @@
       rel="stylesheet"
     />
     <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="./style.css" />
 
     <link
       rel="stylesheet"
@@ -19,7 +19,7 @@
 
     <!-- import the webpage's javascript file -->
 
-    <script src="/script.js" defer></script>
+    <script src="./script.js" defer></script>
   
     <!-- import the p5.js library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.js"></script>
@@ -30,12 +30,12 @@
     <!-- link p5.play.js -->
     <script src="lib/p5.play.js" type="text/javascript"></script>
   </head>
-  <body>
+  <body id="landing">
     <h1 class="animate__animated animate__backInDown" id="welcome">
       welcome!
     </h1>
-    <p>
-      EcoBud makes living a sustainable life and fighting environmental issues enjoyable <br>with an adorable companion that is counting on <b>YOU</b> to take action and make a difference
+    <p id="landing-text">
+      EcoBud makes living a sustainable life and fighting environmental issues enjoyable with an adorable companion that is counting on <b>YOU</b> to take action and make a difference
     </p>
     <h2>
       now, select your buddy!
@@ -44,14 +44,14 @@
       <div
         id="penguinButton"
         class="button"
-        onclick="window.location.href='/questionnaire.html';setAnimal('penguin')"
+        onclick="window.location.href='./questionnaire.html';setAnimal('penguin')"
       >
         galapagos penguin
       </div>
       <div
         id="turtleButton"
         class="button"
-        onclick="window.location.href='/questionnaire.html';setAnimal('turtle')"
+        onclick="window.location.href='./questionnaire.html';setAnimal('turtle')"
       >
         hawksbill <br />
         sea turtle
@@ -59,23 +59,24 @@
       <div
         id="birdButton"
         class="button"
-        onclick="window.location.href='/questionnaire.html';setAnimal('bird')"
+        onclick="window.location.href='./questionnaire.html';setAnimal('bird')"
       >
         great curassow <br />
         bird
       </div>
     </div>
+    <div class="bg-images">
+      <img
+        src="https://cdn.glitch.com/acf75fd6-559f-44e0-8b37-99503c901125%2FNew%20Document%203.png?v=1598050053404"
+        alt="trees on a landscape"
+        id="tree-landscape"
+      />
+      <img
+        src="https://cdn.glitch.com/acf75fd6-559f-44e0-8b37-99503c901125%2FNew%20Document%204.png?v=1598050450722"
+        alt="ocean with two fish"
+        id="ocean"
+      />
+    </div>
   </body>
-  <div>
-    <img
-      src="https://cdn.glitch.com/acf75fd6-559f-44e0-8b37-99503c901125%2FNew%20Document%203.png?v=1598050053404"
-      alt="trees on a landscape"
-      id="tree-landscape"
-    />
-    <img
-      src="https://cdn.glitch.com/acf75fd6-559f-44e0-8b37-99503c901125%2FNew%20Document%204.png?v=1598050450722"
-      alt="ocean with two fish"
-      id="ocean"
-    />
-  </div>
+ 
 </html>

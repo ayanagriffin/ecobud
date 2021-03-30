@@ -10,17 +10,17 @@
       rel="stylesheet"
     />
     <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="./style.css" />
 
     <!-- import the webpage's javascript file -->
-    <script src="/script.js" defer></script>
+    <script src="./script.js" defer></script>
     
     <script>
     function dispScore(){
       getScore();
       let hapScore = sessionStorage.getItem("score");
       document.getElementById("your-score").innerHTML =
-      "<h2>your score:</h2><br> <div id='score'>" + hapScore + "</div>";
+      "<div id='score'>" + hapScore + "</div>";
     }
     </script>
 
@@ -30,18 +30,19 @@
     daily questionnaire
     </h1>
   <div class = "score-container">
-    <div id = "your-score">
-    </div>
+    <h2>your score:</h2>
     <img
       src="https://cdn.glitch.com/b7f307dd-f2d7-4ce3-a381-12464d9a0fe9%2Fpenguin%20neutral.png?v=1598037769692"
       alt="animal showing emotion based on your score"
       id="score-animal"
     />
+    <div id = "your-score">
+    </div>
  <div class = "duo-buttons">
-      <div id="ok" class="button" onclick="window.location.href='/home.html'">
+      <div id="ok" class="button" onclick="window.location.href='./home.html'">
           done
       </div>
-   <div id="recents" class="button" onclick="window.location.href='/past-scores.html'">
+   <div id="recents" class="button" onclick="window.location.href='./past-scores.html'">
           see recent scores
       </div>
     </div>
