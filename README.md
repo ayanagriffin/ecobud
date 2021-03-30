@@ -1,7 +1,7 @@
 
 # Ecobud!
 
-Ecobud is a gamified web app to encourage and empower people to be more environmentally conscious. It makes living sustainably and fighting environmental issues enjoyable with an adorable companion that is counting on YOU to take action and make a long-term difference. This project was made for [Hack for the People](https://hackforthepeople.com/), where it won __Best Environmental Hack__ and the __Pale Blue Dot Award__! Check out our project submission video on [Devpost](https://devpost.com/software/ecobud-984phm)
+Ecobud is a gamified web app to encourage and empower people to be more environmentally conscious. It makes living sustainably and fighting environmental issues enjoyable with an adorable companion that is counting on YOU to take action and make a long-term difference. This project was made for [Hack for the People](https://hackforthepeople.com/), where it won __Best Environmental Hack__ and the __Pale Blue Dot Award__! Check out our project submission video on [Devpost](https://devpost.com/software/ecobud-984phm), and [view the live site](https://ayanagriffin.com/ecobud) (Best suited for laptop and computers as of now!). 
 
 ![ecobud](https://user-images.githubusercontent.com/69114559/113028629-57172080-9140-11eb-972b-bbd8e9598d83.png)
 
@@ -36,4 +36,4 @@ As a group, none of us had in depth experience or familiarity with HTML and CSS.
 
 ## What's next for EcoBud
 
-We would love to add more species for users to select as their EcoBud! In addition, we believe that data visualization is a powerful tool and incorporating more of it into EcoBud would be a huge next step. Finally, we'd love to allow users to have an account to store their progress with each species.
+We would love to add more species for users to select as their EcoBud! In addition, we believe that data visualization is a powerful tool and incorporating more of it into EcoBud would be a huge next step. Finally, we'd love to allow users to have an account to store their progress with each species. Design-wise, we'd also like to dedicate more time to making it responsive. 
