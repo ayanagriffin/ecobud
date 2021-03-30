@@ -46,9 +46,9 @@ function getAnimal() {
 function getPastScoresAnimal(){
   let animal = sessionStorage.getItem("animal");
   if(animal === "penguin"){
-    document.getElementById("game").setAttribute("onclick", "window.location.href='/penguin-game.html';");
+    document.getElementById("game").setAttribute("onclick", "window.location.href='./penguin-game.html';");
   }else if(animal === "bird"){
-    document.getElementById("game").setAttribute("onclick", "window.location.href='/bird-game.html';");
+    document.getElementById("game").setAttribute("onclick", "window.location.href='./bird-game.html';");
   }
 }
 
@@ -81,7 +81,7 @@ function getHomeAnimal() {
       document.getElementById("home-animal").src = neutralTurtle;
     }
   } else if (animal === "penguin") {
-    document.getElementById("game").setAttribute("onclick", "window.location.href='/penguin-game.html';");
+    document.getElementById("game").setAttribute("onclick", "window.location.href='./penguin-game.html';");
     document.getElementById("name").innerHTML = "galapagos penguin";
     if (mood === "sad") {
       document.getElementById("home-animal").src = sadPenguin;
@@ -92,7 +92,7 @@ function getHomeAnimal() {
     }
   } else if (animal === "bird") {
     document.getElementById("game").innerHTML = "data";
-    document.getElementById("game").setAttribute("onclick", "window.location.href='/bird-game.html';");
+    document.getElementById("game").setAttribute("onclick", "window.location.href='./bird-game.html';");
     document.getElementById("name").innerHTML = "great curassow bird";
     
     if (mood === "sad") {
@@ -179,7 +179,7 @@ function getFacts() {
     document.getElementById("f3").innerHTML =
       "every few years, females return to the beaches where they were born to nest";
   } else if (animal === "penguin") {
-    document.getElementById("game").setAttribute("onclick", "window.location.href='/penguin-game.html';");
+    document.getElementById("game").setAttribute("onclick", "window.location.href='./penguin-game.html';");
      if(mood === "sad"){
       document.getElementById("home-animal").src = sadPenguin;
     }else if(mood === "happy"){
@@ -197,7 +197,7 @@ function getFacts() {
       "they become ready for independent life at only 3-6 months old";
   } else if (animal === "bird") {
     document.getElementById("game").innerHTML = "data";
-    document.getElementById("game").setAttribute("onclick", "window.location.href='/bird-game.html';");
+    document.getElementById("game").setAttribute("onclick", "window.location.href='./bird-game.html';");
      if(mood === "sad"){
       document.getElementById("home-animal").src = sadBird;
     }else if(mood === "happy"){
